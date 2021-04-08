@@ -9,7 +9,7 @@ function init(){
 // SET A COUNT VARIABLE TO DISPLAY NEXT TO EMPLOYEES HEADER
     let employeeCount;
 // ADD EMPLOYEE
-    addForm.addEventListener('submit', (e) => {
+    e.addEventListener('submit', (e) => {
     // PREVENT FORM SUBMISSION
     e.preventDefault();
     // GET THE VALUES FROM THE TEXT BOXES
