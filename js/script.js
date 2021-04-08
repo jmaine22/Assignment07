@@ -1,28 +1,30 @@
-// GET ADD EMPLOYEE FORM AND EMPLOYEE TABLE FROM THE DOM
-let myEmployee = function (){
-    "use strict";
-     window.document.getElementById(addForm);
-     window.document.getElementById(employees);
-}
+function init(){
+    // GET ADD EMPLOYEE FORM AND EMPLOYEE TABLE FROM THE DOM
+    let myEmployee = (e) => {
+        "use strict";
+        e.document.getElementById(addForm);
+        e.document.getElementById('employees');
+    }
+    console.log(myEmployee);
 // SET A COUNT VARIABLE TO DISPLAY NEXT TO EMPLOYEES HEADER
-let employeeCount;
-
+    let employeeCount;
 // ADD EMPLOYEE
-let myForm = form.addEventListener('submit', (e) => {
+    addForm.addEventListener('submit', (e) => {
     // PREVENT FORM SUBMISSION
     e.preventDefault();
     // GET THE VALUES FROM THE TEXT BOXES
-    e.document.getElementById('id').value;
-    e.document.getElementById('name').value;
-    e.document.getElementById('extension').value;
-    e.document.getElementById('email').value;
-    e.document.getElementById('department').value;
+    addForm.e.document.getElementById('id').value;
+    addForm.e.document.getElementById('name').value;
+    addForm.e.document.getElementById('extension').value;
+    addForm.e.document.getElementById('email').value;
+    addForm.e.document.getElementById('department').value;
     // INSERT A NEW ROW AT THE END OF THE EMPLOYEES TABLE
-
+    let row = myEmployee.employees.insertRow();
+    console.log(row);
     // INSERT A CELL FOR EACH ITEM WITHIN THE NEW ROW
-
+    let cellID = row.insertCell();
     // APPEND THE TEXT VALUES AS TEXT NODES WITHIN THE CELLS
-
+    cellID.appendChild(cellID.createTextNode());
     // CREATE THE DELETE BUTTON
 
     // RESET THE FORM
@@ -35,10 +37,7 @@ let myForm = form.addEventListener('submit', (e) => {
 
 });
 // DELETE EMPLOYEE
+}
 
-window.addEventListener("load", function () {
-    "use strict";
-    myEmployee();
-    myForm();
 
-})
+window.addEventListener("load", init);
