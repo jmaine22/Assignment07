@@ -13,16 +13,16 @@ function init(){
     // PREVENT FORM SUBMISSION
     e.preventDefault();
     // GET THE VALUES FROM THE TEXT BOXES
-    addForm.e.document.getElementById('id').value;
-    addForm.e.document.getElementById('name').value;
-    addForm.e.document.getElementById('extension').value;
-    addForm.e.document.getElementById('email').value;
-    addForm.e.document.getElementById('department').value;
+    let myId = addForm.e.document.getElementById('id').value;
+    let myName = addForm.e.document.getElementById('name').value;
+    let myExtension = addForm.e.document.getElementById('extension').value;
+    let myEmail = addForm.e.document.getElementById('email').value;
+    let myDepartment = addForm.e.document.getElementById('department').value;
     // INSERT A NEW ROW AT THE END OF THE EMPLOYEES TABLE
     let row = myEmployee.employees.insertRow();
     console.log(row);
     // INSERT A CELL FOR EACH ITEM WITHIN THE NEW ROW
-    let cellID = row.insertCell();
+    let cellID = row.insertCell(myId, myName, myExtension, myEmail, myDepartment);
     // APPEND THE TEXT VALUES AS TEXT NODES WITHIN THE CELLS
     cellID.appendChild(cellID.createTextNode());
     // CREATE THE DELETE BUTTON
@@ -31,6 +31,7 @@ function init(){
     e.myEmployee.addForm.reset();
 
     // SET FOCUS BACK TO THE ID TEXT BOX
+    myId.focus();
 
     // INCREMENENT THE NUMBER OF EMPLOYEES IN THE TABLE
      employeeCount += 1;
