@@ -2,14 +2,14 @@ function init(){
     // GET ADD EMPLOYEE FORM AND EMPLOYEE TABLE FROM THE DOM
     let myEmployee = (e) => {
         "use strict";
-        e.document.getElementById(addForm);
+        e.document.getElementById('addForm');
         e.document.getElementById('employees');
     }
     console.log(myEmployee);
 // SET A COUNT VARIABLE TO DISPLAY NEXT TO EMPLOYEES HEADER
     let employeeCount;
 // ADD EMPLOYEE
-    e.addEventListener('submit', (e) => {
+    myEmployee.e.addEventListener('submit', (e) => {
     // PREVENT FORM SUBMISSION
     e.preventDefault();
     // GET THE VALUES FROM THE TEXT BOXES
